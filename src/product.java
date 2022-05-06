@@ -4,24 +4,24 @@ public class product {
     private String name;
     private double priceAfterDiscount;
 
-    public product(double price, String productID, String name, double priceAfterDiscount){
+    public product(double price, String productID, String name){
         this.price = price;
         this.productID = productID;
-        this.priceAfterDiscount = priceAfterDiscount;
+        this.priceAfterDiscount = price;
         this.name = name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setProductID(String productID) {
-        this.productID = productID;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public void setProductID(String productID) {
+//        this.productID = productID;
+//    }
+//
+//    public void setPrice(double price) {
+//        this.price = price;
+//    }
 
     public void setPriceAfterDiscount(double priceAfterDiscount) {
         this.priceAfterDiscount = priceAfterDiscount;
@@ -44,7 +44,8 @@ public class product {
     }
 
     public String getWholeProduct(){
-        String[] params = {getName(), F getPrice(), getProductID(), getPriceAfterDiscount()};
+        String product = "ID: " + getProductID() + ", name: " + getName() + ", price: " + getPrice() + ", after discount: " + getPriceAfterDiscount();
+        return product;
     }
 
 }
