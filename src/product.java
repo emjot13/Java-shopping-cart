@@ -4,7 +4,7 @@ public class product {
     private String name;
     private double priceAfterDiscount;
 
-    public void init(double price, String productID, String name, double priceAfterDiscount){
+    public product(double price, String productID, String name, double priceAfterDiscount){
         this.price = price;
         this.productID = productID;
         this.priceAfterDiscount = priceAfterDiscount;
@@ -42,4 +42,9 @@ public class product {
     public String getProductID() {
         return productID;
     }
+
+    public String getWholeProduct(){
+        String[] params = {getName(), F getPrice(), getProductID(), getPriceAfterDiscount()};
+    }
+
 }
