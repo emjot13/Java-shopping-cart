@@ -24,7 +24,7 @@ Towary w koszyku powinny być posegregowane malejąco według ceny,
 a potem według kolejności alfabetycznej nazw produktów. 
 Sposób sortowania może produktów może się zmieniać w trakcie działania programu. 
 
-Twoim zadaniem jest zaimplementowanie logiki, operującej na obiektach typu ``Product``, 
+Twoim zadaniem jest zaimplementowanie logiki, operującej na obiektach typu ``product.Product``, 
 która umożliwiałaby:
 1. Wyszukiwanie najtańszego/najdroższego produktu w zadanej kolekcji produktów
 2. Wyszukiwanie n najtańszych/najdrożyszych produktów w zadanej kolekcji produktów
@@ -32,7 +32,7 @@ która umożliwiałaby:
 4. Wyliczanie sumy cen wszystkich zadanych produktów
 6. Aplikowanie opisanych powyżej rodzajów promocji na zadanej kolekcji produktów w koszyku
 
-Cechy związane z klasą ``Product``:
+Cechy związane z klasą ``product.Product``:
 - kod produktu (code) - String
 - nazwa produktu (name) - String
 - cena produktu (price) – double
