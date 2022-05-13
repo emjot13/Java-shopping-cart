@@ -1,5 +1,6 @@
 package cart;
 
+import discounts.Discount;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -18,11 +19,17 @@ public class Cart {
   private List<Product> products;
   private double cartValue;
   private Comparator<Product> sortType;
+  private List<Discount> discounts;
 
   public Cart(Comparator<Product> sortType) {
     this.sortType = sortType;
     this.products = new ArrayList<>();
     this.cartValue = 0;
+    this.discounts = new ArrayList<>();
+  }
+
+  public void addDiscount(Discount discount){
+    discounts.add(discount);
   }
 
   public void addProduct(Product product) {
@@ -42,9 +49,15 @@ public class Cart {
   }
 
   public void calculateCartValue() {
+    this.cartValue = 0;
       for (Product product : products) {
-          cartValue += product.getPriceAfterDiscount();
+          this.cartValue += product.getPriceAfterDiscount();
       }
+    for (Discount discount : discounts){
+      if (discount.canApply(this)){
+        discount.apply(this);
+      }
+    }
   }
 
 

@@ -1,14 +1,16 @@
 package discounts;
+
 import cart.Cart;
 
-public class CartValueMoreThan300 implements Discount {
+public class ThirtyPercentOffForChosenItem implements Discount{
     @Override
     public void apply(Cart cart){
-        cart.setCartValue(cart.getCartValue() * 0.95);
+        cart.;
     }
 
     @Override
     public boolean canApply(Cart cart){
+        boolean used = false;
         return cart.getCartValue() > 300;
     }
 }
