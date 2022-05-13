@@ -9,6 +9,7 @@ public class CartValueMoreThan300 implements Discount {
 
     @Override
     public boolean canApply(Cart cart){
+        cart.calculateCartValue();
         return cart.getCartValue() > 300;
     }
 }

@@ -10,6 +10,9 @@ public class FreeCup implements Discount{
 
     @Override
     public boolean canApply(Cart cart){
+        cart.calculateCartValue();
         return cart.getCartValue() > 200;
     }
+
+
 }

@@ -22,7 +22,4 @@ public class Product {
         this.priceAfterDiscount = price;
     }
 
-
-
-
 }

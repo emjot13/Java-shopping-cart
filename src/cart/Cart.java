@@ -29,7 +29,9 @@ public class Cart {
   }
 
   public void addDiscount(Discount discount){
-    discounts.add(discount);
+    if (discount.canApply(this)){
+        discount.apply(this);
+    }
   }
 
   public void addProduct(Product product) {
@@ -53,11 +55,6 @@ public class Cart {
       for (Product product : products) {
           this.cartValue += product.getPriceAfterDiscount();
       }
-    for (Discount discount : discounts){
-      if (discount.canApply(this)){
-        discount.apply(this);
-      }
-    }
   }
 
 
